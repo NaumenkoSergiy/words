@@ -1,0 +1,5 @@
+.row.text-center
+  h1.subheader= @word
+.row.text-center
+  = link_to 'Answer', root_path(answer: @word), class: :button
+  =< link_to 'Next word', root_path, class: :button
