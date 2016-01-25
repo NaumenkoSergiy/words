@@ -1,5 +1,7 @@
 .row.text-center
-  h1.subheader= @word
+  .large-5.medium-5.small-8.columns.large-offset-3.medium-offset-3.small-offset-2
+    h1.subheader= @word
 .row.text-center
-  = link_to 'Answer', root_path(answer: @word), class: :button
-  =< link_to 'Next word', root_path, class: :button
+  .large-5.medium-5.small-10.columns.large-offset-3.medium-offset-3.small-offset-1
+    = link_to 'Answer', root_path(answer: @word), class: :button
+    =< link_to 'Next word', root_path, class: :button
