@@ -3,15 +3,11 @@ class DashboardController < ApplicationController
     if params[:answer]
       word_by_answer
     else
-      @word = Word.find(rand(1..words_length)).send(translate_version) if words_length != 0
+      @word = Word.find(Word.pluck(:id).sample).send(translate_version) if words_length != 0
     end
   end
 
   private
-
-  def words_length
-    @words_length ||= Word.count
-  end
 
   def translate_version
     rand(0..1) == 0 ? 'english' : 'ukraine'
