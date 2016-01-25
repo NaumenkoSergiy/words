@@ -13,7 +13,10 @@
   </head>
 
   <body>
-
+    <div class='sub-nav'>
+      <dd><%= link_to 'Home', root_path %></dd>
+      <dd><%= link_to 'Words', words_path %></dd>
+    </div>
     <%= yield %>
 
   </body>
