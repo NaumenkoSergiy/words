@@ -9,6 +9,10 @@ class DashboardController < ApplicationController
 
   private
 
+  def words_length
+    @words_length ||= Word.count
+  end
+
   def translate_version
     rand(0..1) == 0 ? 'english' : 'ukraine'
   end
